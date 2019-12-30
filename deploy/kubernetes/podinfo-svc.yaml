@@ -9,7 +9,7 @@ spec:
     nodePort: 32196
     port: 80
     protocol: TCP
-    targetPort: 3000
+    targetPort: 9898
   selector:
     app: podinfo
   sessionAffinity: None
