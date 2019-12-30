@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: podinfo
+spec:
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: http
+    nodePort: 32196
+    port: 80
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: podinfo
+  sessionAffinity: None
+  type: LoadBalancer
+
